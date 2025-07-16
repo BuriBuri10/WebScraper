@@ -11,7 +11,9 @@ class PersonaRequest(BaseModel):
 async def generate_persona(data: PersonaRequest):
     """
     Endpoint to generate a persona based on a user's Reddit activity
+
     Extracts the username from the given Reddit profile URL, then runs the persona workflow using LangGraph
+    
     eg. - ttps://www.reddit.com/user/spez/
 
     Args:
