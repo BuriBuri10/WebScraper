@@ -84,10 +84,10 @@ BeyondChats/
 }
 
 ### POST/api/download
-> Request body:
-> username: kojied
+Request body:
+>   username: kojied
 
-> Response body:
+Response body:
 > Download file
 _____________________________________________________________________________________________________________________________
 
