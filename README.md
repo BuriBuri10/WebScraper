@@ -2,6 +2,32 @@
 
 # Deployed Soultion: https://webscraper-zf72.onrender.com
 
+## Usage
+
+### Run the FastAPI Server in terminal with the following command
+>   uvicorn api.main:app --reload
+>   Access FastAPI Swagger UI at: http://localhost:8000/docs
+
+### POST/api/generate-persona
+> Request body:
+
+{
+  "reddit_url": "https://www.reddit.com/user/kojied/"
+}
+
+> Response
+
+{
+  "persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."
+}
+
+### POST/api/download
+Request body:
+> username: kojied
+
+Response body:
+> Download file
+
 ## RedditPsyche
 ## To run the executable python script, open the terminal & run: 
 > python -m workflows.workflow
