@@ -83,6 +83,12 @@ BeyondChats/
   "persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."
 }
 
+### POST/api/download
+> Request body:
+> username: kojied
+
+> Response body:
+> Download file
 _____________________________________________________________________________________________________________________________
 
 
