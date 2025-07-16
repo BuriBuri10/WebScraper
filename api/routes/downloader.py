@@ -20,6 +20,11 @@ router = APIRouter()
 async def download_persona(username: str):
     """
     Endpoint to download the generated persona file by username
+    
+    eg.- If the URL: "https://www.reddit.com/user/spez/"
+    
+    > username: spez
+    _______________________________________________________________
 
     Args:
         username (str): Reddit username used for persona generation

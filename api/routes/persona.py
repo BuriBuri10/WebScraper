@@ -20,6 +20,7 @@ async def generate_persona(data: PersonaRequest, request: Request):
     
     > eg.- "reddit_url": "https://www.reddit.com/user/spez/"
 
+    _______________________________________________________
     
     Args:
         data (PersonaRequest): Contains the Reddit URL of the user
