@@ -1,0 +1,26 @@
+2025-07-16 17:31:07.102 | INFO     | __main__:main:115 - Received URL: https://www.reddit.com/user/spez/
+2025-07-16 17:31:07.103 | INFO     | __main__:__init__:18 - Initializing PersonaWorkflow...
+2025-07-16 17:31:07.383 | INFO     | workflows.graphs.persona.nodes.scraper_node:__init__:15 - ScraperNode Initialized with RedditScraper
+2025-07-16 17:31:07.889 | INFO     | core.prompt_templates:__init__:16 - PersonaPromptBuilder initialized
+2025-07-16 17:31:07.889 | INFO     | document_processing.analyzer:__init__:19 - PersonaAnalyzer initialized
+2025-07-16 17:31:07.889 | INFO     | workflows.graphs.persona.nodes.analyzer_node:__init__:11 - AnalyzerNode initialized with PersonaAnalyzer
+2025-07-16 17:31:07.891 | INFO     | workflows.graphs.persona.nodes.formatter_node:__init__:11 - FormatterNode initialized with PersonaWriter
+2025-07-16 17:31:07.893 | INFO     | __main__:_build_graph:45 - Workflow graph defined.
+2025-07-16 17:31:07.899 | INFO     | __main__:__init__:26 - PersonaWorkflow initialized successfully
+2025-07-16 17:31:07.899 | INFO     | __main__:run:103 - Running workflow for user: spez
+2025-07-16 17:31:07.906 | INFO     | workflows.graphs.persona.nodes.scraper_node:process:20 - Scraping Reddit data for: spez
+2025-07-16 17:31:10.957 | INFO     | core.reddit_scraper:fetch_user_data:69 - Fetched 10 posts and 10 comments for user: spez
+2025-07-16 17:31:10.957 | INFO     | workflows.graphs.persona.nodes.scraper_node:process:34 - Scraped 20 documents for user: spez
+2025-07-16 17:31:10.958 | INFO     | workflows.graphs.persona.nodes.analyzer_node:process:20 - Analyzing 20 Reddit posts...
+2025-07-16 17:31:10.959 | INFO     | document_processing.analyzer:analyze_user:35 - Sending prompt to LLM for user: spez
+2025-07-16 17:31:14.547 | INFO     | document_processing.analyzer:analyze_user:37 - Successfully built spez's Persona Card
+2025-07-16 17:31:14.548 | INFO     | workflows.graphs.persona.nodes.analyzer_node:process:29 - Persona traits extracted.
+2025-07-16 17:31:14.548 | INFO     | workflows.graphs.persona.nodes.formatter_node:process:20 - Formatting traits into a final persona summary...
+2025-07-16 17:31:14.549 | INFO     | document_processing.persona_writer:save_persona_to_txt:40 - Saved the Persona Card to outputs\spez_persona.txt
+2025-07-16 17:31:14.550 | INFO     | workflows.graphs.persona.nodes.formatter_node:process:27 - Persona summary successfully generated.
+2025-07-16 17:31:14.554 | WARNING  | __main__:get_graph_structure:61 - Pyppeteer is not installed. To enable browser-based rendering, run:
+
+    pip install pyppeteer
+
+2025-07-16 17:31:15.298 | INFO     | __main__:get_graph_structure:73 - Graph saved as -- graph_structure.png
+2025-07-16 17:31:15.299 | INFO     | __main__:main:150 - Saved graph's structure as graph_structure.png
