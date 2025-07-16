@@ -8,17 +8,13 @@
 >   Access the Swagger UI at: https://webscraper-zf72.onrender.com/docs
 
 ### POST/api/generate-persona
-> Request body:
+Request body:
 
-{
-  "reddit_url": "https://www.reddit.com/user/kojied/"
-}
+> {"reddit_url": "https://www.reddit.com/user/kojied/"}
 
-> Response
+Response body:
 
-{
-  "persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."
-}
+> {"persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."}
 
 ### POST/api/download
 Request body:
@@ -96,17 +92,13 @@ BeyondChats/
 >   Access FastAPI Swagger UI at: http://localhost:8000/docs
 
 ### POST/api/generate-persona
-> Request body:
+Request body:
 
-{
-  "reddit_url": "https://www.reddit.com/user/kojied/"
-}
+> {"reddit_url": "https://www.reddit.com/user/kojied/"}
 
-> Response
+Response body:
 
-{
-  "persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."
-}
+> {"persona": "This user appears to be confident, opinionated, and deeply engaged with discussions around tech and policy..."}
 
 ### POST/api/download
 Request body:
