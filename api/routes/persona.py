@@ -10,11 +10,11 @@ class PersonaRequest(BaseModel):
 @router.post("/generate-persona")
 async def generate_persona(data: PersonaRequest):
     """
-    Endpoint to generate a persona based on a user's Reddit activity
+    > Endpoint to generate a persona based on a user's Reddit activity
 
-    Extracts the username from the given Reddit profile URL, then runs the persona workflow using LangGraph
-    
-    eg. - ttps://www.reddit.com/user/spez/
+    > Extracts the username from the given Reddit profile URL, then runs the persona workflow using LangGraph
+
+    eg. - https://www.reddit.com/user/spez/
 
     Args:
         data (PersonaRequest): Contains the Reddit URL of the user
