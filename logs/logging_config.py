@@ -14,19 +14,20 @@ def find_project_root():
     Finds the root directory of the project by looking for the .git folder.
     Traverses up the directory tree until it finds .git or reaches the system root.
     """
+    current_path = Path(__file__).resolve()
+    for parent in current_path.parents:
+        if (parent / ".git").exists():
+            return parent
+    # fallback to fixed path or warning
+    print("Warning: .git not found, using fallback path /app")
+    return Path("/app")
+
     # current_dir = os.path.abspath(os.path.dirname(__file__))
     # while current_dir != os.path.dirname(current_dir):  # Keep going up until root
     #     if os.path.isdir(os.path.join(current_dir, ".git")):
     #         return current_dir
     #     current_dir = os.path.dirname(current_dir)
     # raise FileNotFoundError("Project root containing '.git' directory not found.")
-    current_path = Path(__file__).resolve()
-    for parent in current_path.parents:
-        if (parent / ".git").exists():
-            return parent
-    # fallback to fixed path or warn
-    print("Warning: .git not found, using fallback path /app")
-    return Path("/app")
 
 def define_log_level(print_level="INFO", logfile_level="DEBUG", name: Optional[str] = None):
     """
