@@ -128,7 +128,7 @@ How to use it:
 ### 1 - Install docker desktop & start the terminal
 
 ### 2 - Create a Docker Image with (in the terminal):
-> docker build -t reddit-persona-generator .
+> docker build -t reddit-persona-builder .
 
 ### 3 - Intialize the container with (again, in the terminal):
 > docker run -d -p 8000:8000 --env-file .env reddit-persona-generator
