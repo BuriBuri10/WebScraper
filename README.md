@@ -4,9 +4,8 @@
 
 ## Usage
 
-### Run the FastAPI Server in terminal with the following command
->   uvicorn api.main:app --reload
->   Access FastAPI Swagger UI at: http://localhost:8000/docs
+### Click on the above URL & follow the below mentioned steps
+>   Access the Swagger UI at: https://webscraper-zf72.onrender.com/docs
 
 ### POST/api/generate-persona
 > Request body:
