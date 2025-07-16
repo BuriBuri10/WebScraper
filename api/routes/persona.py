@@ -1,6 +1,6 @@
 import os
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 from workflows.workflow import PersonaWorkflow
 
@@ -10,7 +10,7 @@ class PersonaRequest(BaseModel):
     reddit_url: str
 
 @router.post("/generate-persona")
-async def generate_persona(data: PersonaRequest):
+async def generate_persona(data: PersonaRequest, request: Request):
     """
     Endpoint to generate a persona based on a user's Reddit activity
 
@@ -48,7 +48,7 @@ async def generate_persona(data: PersonaRequest):
         # ✅ NEW: Return download URL
         return {
             "persona": persona_text,
-            "download_url": f"/api/download/{username}"
+            "download_url": str(request.base_url) + f"api/download/{username}"
         }
 
     raise HTTPException(status_code=500, detail=result.get("error", "Persona generation failed"))
